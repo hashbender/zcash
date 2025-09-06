@@ -12,7 +12,7 @@ permissions:
 jobs:
   required-pass:
     name: Check required-pass steps
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-large-plus-16c-32g
 
     steps:
       - name: Fetch statuses for required-pass steps

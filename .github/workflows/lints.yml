@@ -6,7 +6,7 @@ on: pull_request
 jobs:
   commit-script-check:
     name: Scripted diffs
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-large-plus-16c-32g
     steps:
       - uses: actions/checkout@v4
         with:
@@ -17,7 +17,7 @@ jobs:
 
   general-lints:
     name: General
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-large-plus-16c-32g
     steps:
       - uses: actions/checkout@v4
       - name: Install dependencies
@@ -64,7 +64,7 @@ jobs:
 
   python:
     name: Python
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-large-plus-16c-32g
     steps:
       - uses: actions/checkout@v4
       - name: Install dependencies
@@ -80,7 +80,7 @@ jobs:
 
   rust-clippy:
     name: Clippy (MSRV)
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-large-plus-16c-32g
     steps:
       - uses: actions/checkout@v4
       - name: Run clippy
@@ -92,7 +92,7 @@ jobs:
 
   rustfmt:
     name: Rustfmt
-    runs-on: ubuntu-latest
+    runs-on: tenki-standard-large-plus-16c-32g
     steps:
       - uses: actions/checkout@v4
       - run: cargo fmt -- --check
